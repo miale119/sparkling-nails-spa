@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gallery — Sparkling Nails & Spa</title>
+  <meta name="description" content="See our nail art and salon work gallery." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html"><img src="images/logo.png" alt="Sparkling Nails & Spa logo" /></a>
+      <button class="menu-toggle" aria-controls="primary-nav" aria-expanded="false"><span class="sr-only">Open menu</span>☰</button>
+      <nav id="primary-nav" class="nav" aria-label="Primary">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="booking.html">Book</a></li>
+          <li><a class="active" href="gallery.html">Gallery</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="section">
+    <div class="container">
+      <h1 class="section-title">Our Work</h1>
+      <p class="section-sub">A selection of neutral and elegant designs.</p>
+
+      <div class="grid gallery" id="gallery">
+        <!-- Replace with real images -->
+        <a href="images/gallery-1.jpg" class="glink"><img src="images/gallery-1.jpg" alt="Neutral ombré manicure" /></a>
+        <a href="images/gallery-2.jpg" class="glink"><img src="images/gallery-2.jpg" alt="Soft pink gel manicure" /></a>
+        <a href="images/gallery-3.jpg" class="glink"><img src="images/gallery-3.jpg" alt="Clean French tips" /></a>
+        <a href="images/gallery-4.jpg" class="glink"><img src="images/gallery-4.jpg" alt="Neutral almond nails" /></a>
+        <a href="images/gallery-5.jpg" class="glink"><img src="images/gallery-5.jpg" alt="Glazed finish mani" /></a>
+        <a href="images/gallery-6.jpg" class="glink"><img src="images/gallery-6.jpg" alt="Minimal nail art accents" /></a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-labelledby="lightbox-title" hidden>
+    <button class="lightbox-close" aria-label="Close image">&times;</button>
+    <img id="lightbox-img" src="" alt="" />
+    <p id="lightbox-caption" class="muted"></p>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container footer-grid"><p class="muted">© <span id="year"></span> Sparkling Nails &amp; Spa</p></div>
+  </footer>
+
+  <script src="js/script.js" defer></script>
+</body>
+</html>

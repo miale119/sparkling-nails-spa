@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Services & Prices — Sparkling Nails & Spa</title>
+  <meta name="description" content="Nail services and prices: manicures, pedicures, acrylic, dip powder, waxing." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html"><img src="images/logo.png" alt="Sparkling Nails & Spa logo" /></a>
+      <button class="menu-toggle" aria-controls="primary-nav" aria-expanded="false"><span class="sr-only">Open menu</span>☰</button>
+      <nav id="primary-nav" class="nav" aria-label="Primary">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a class="active" href="services.html">Services</a></li>
+          <li><a href="booking.html">Book</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="section">
+    <div class="container">
+      <h1 class="section-title">Our Services & Prices</h1>
+      <p class="section-sub">Transparent pricing with estimated times to help you plan.</p>
+
+      <div class="grid cards services-grid">
+        <!-- Each card mirrors the booking service options -->
+        <article class="card service" data-service="Classic Manicure" data-price="15" data-time="30 mins">
+          <h2>Classic Manicure</h2>
+          <p class="price">$15</p>
+          <p class="muted">Estimated time: 30 mins</p>
+          <a class="btn" href="booking.html?service=Classic%20Manicure">Book Now</a>
+        </article>
+
+        <article class="card service" data-service="Gel Manicure" data-price="25" data-time="45 mins">
+          <h2>Gel Manicure</h2>
+          <p class="price">$25</p>
+          <p class="muted">Estimated time: 45 mins</p>
+          <a class="btn" href="booking.html?service=Gel%20Manicure">Book Now</a>
+        </article>
+
+        <article class="card service" data-service="Classic Pedicure" data-price="25" data-time="45 mins">
+          <h2>Classic Pedicure</h2>
+          <p class="price">$25</p>
+          <p class="muted">Estimated time: 45 mins</p>
+          <a class="btn" href="booking.html?service=Classic%20Pedicure">Book Now</a>
+        </article>
+
+        <article class="card service" data-service="Premium Pedicure" data-price="35 &amp; up" data-time="1 hr">
+          <h2>Premium Pedicure</h2>
+          <p class="price">$35 &amp; up</p>
+          <p class="muted">Estimated time: 1 hr</p>
+          <a class="btn" href="booking.html?service=Premium%20Pedicure">Book Now</a>
+        </article>
+
+        <article class="card service" data-service="Volcano Pedicure" data-price="45 &amp; up" data-time="1 hr 15 mins">
+          <h2>Volcano Pedicure</h2>
+          <p class="price">$45 &amp; up</p>
+          <p class="muted">Estimated time: 1 hr 15 mins</p>
+          <a class="btn" href="booking.html?service=Volcano%20Pedicure">Book Now</a>
+        </article>
+
+        <article class="card service" data-service="Acrylic Full Set" data-price="45 &amp; up" data-time="1 hr">
+          <h2>Acrylic Full Set</h2>
+          <p class="price">$45 &amp; up</p>
+          <p class="muted">Estimated time: 1 hr</p>
+          <a class="btn" href="booking.html?service=Acrylic%20Full%20Set">Book Now</a>
+        </article>
+
+        <article class="card service" data-service="Dip Powder Nails" data-price="45 &amp; up" data-time="1 hr 15 mins">
+          <h2>Dip Powder Nails</h2>
+          <p class="price">$45 &amp; up</p>
+          <p class="muted">Estimated time: 1 hr 15 mins</p>
+          <a class="btn" href="booking.html?service=Dip%20Powder%20Nails">Book Now</a>
+        </article>
+
+        <article class="card service" data-service="Waxing" data-price="from 15" data-time="Varies">
+          <h2>Waxing</h2>
+          <p class="price">from $15</p>
+          <p class="muted">Estimated time: Varies</p>
+          <a class="btn" href="booking.html?service=Waxing">Book Now</a>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div><img class="footer-logo" src="images/logo.png" alt="logo" /></div>
+      <div>
+        <h3 class="footer-title">Hours</h3>
+        <ul class="footer-list">
+          <li>Mon–Fri: 9:00 AM – 7:00 PM</li>
+          <li>Sat: 9:00 AM – 6:00 PM</li>
+          <li>Sun: <strong>Closed</strong></li>
+        </ul>
+      </div>
+      <div><a class="link" href="booking.html">Book an Appointment</a></div>
+    </div>
+  </footer>
+
+  <script src="js/script.js" defer></script>
+</body>
+</html>

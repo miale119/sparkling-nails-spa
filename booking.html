@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Appointment | Sparkling Nails & Spa</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="brand">
+        <img src="images/logo.png" alt="Sparkling Nails & Spa logo">
+      </a>
+      <nav class="nav">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main content -->
+  <main id="main">
+    <section class="section container">
+      <h1 class="section-title">Book an Appointment</h1>
+      <p class="section-sub">
+        Please complete the form below to request your appointment. We’ll confirm availability by email or phone.
+      </p>
+
+      <form id="booking-form" class="form card"
+            action="https://formspree.io/f/xyzbqbva"  <!-- ← replace XXXXXXXX with your Formspree ID -->
+      
+
+        <!-- Hidden options -->
+        <input type="hidden" name="_subject" value="New Booking Request from Website">
+        <!-- Optional: redirect to thank-you page -->
+        <!-- <input type="hidden" name="_redirect" value="https://yourusername.github.io/sparkling-nails-spa/thankyou.html"> -->
+
+        <label for="name">Full Name *</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email *</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone *</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="service">Select Service *</label>
+        <select id="service" name="service" required>
+          <option value="">-- Choose a service --</option>
+          <option value="Classic Manicure">Classic Manicure – $15 (30 mins)</option>
+          <option value="Gel Manicure">Gel Manicure – $25 (45 mins)</option>
+          <option value="Classic Pedicure">Classic Pedicure – $25 (45 mins)</option>
+          <option value="Premium Pedicure">Premium Pedicure – $35 &amp; up (1 hr)</option>
+          <option value="Volcano Pedicure">Volcano Pedicure – $45 &amp; up (1 hr 15 mins)</option>
+          <option value="Acrylic Full Set">Acrylic Full Set – $45 &amp; up (1 hr)</option>
+          <option value="Dip Powder Nails">Dip Powder Nails – $45 &amp; up (1 hr 15 mins)</option>
+          <option value="Waxing">Waxing – from $15</option>
+        </select>
+
+        <label for="date">Preferred Date *</label>
+        <input type="date" id="date" name="date" required>
+
+        <label for="time">Preferred Time *</label>
+        <input type="time" id="time" name="time" required>
+
+        <label for="notes">Additional Notes</label>
+        <textarea id="notes" name="notes" rows="4" placeholder="Any special requests or questions?"></textarea>
+
+        <button type="submit" class="btn">Submit Booking</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <img src="images/logo-footer.png" alt="Sparkling Nails & Spa small logo" class="footer-logo">
+        <p>© 2025 Sparkling Nails & Spa. All Rights Reserved.</p>
+      </div>
+      <div>
+        <h3 class="footer-title">Business Hours</h3>
+        <ul class="footer-list">
+          <li>Mon–Fri: 10:00 AM – 7:00 PM</li>
+          <li>Sat: 10:00 AM – 6:00 PM</li>
+          <li>Sun: <strong>Closed</strong></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="footer-title">Contact</h3>
+        <ul class="footer-list">
+          <li>3744 E Chapman Ave, Orange, CA 92869</li>
+          <li>Phone: (714) 538-1951</li>
+          <li>Email: sparklingnailsspa@gmail.com</li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js" defer></script>
+</body>
+</html>

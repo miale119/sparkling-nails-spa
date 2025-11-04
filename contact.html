@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — Sparkling Nails & Spa</title>
+  <meta name="description" content="Contact Sparkling Nails & Spa in Orange, CA. Hours, address, phone, and contact form." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html"><img src="images/logo.png" alt="Sparkling Nails & Spa logo" /></a>
+      <button class="menu-toggle" aria-controls="primary-nav" aria-expanded="false"><span class="sr-only">Open menu</span>☰</button>
+      <nav id="primary-nav" class="nav" aria-label="Primary">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="booking.html">Book</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a class="active" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="section">
+    <div class="container">
+      <h1 class="section-title">Get in Touch</h1>
+
+      <div class="grid two">
+        <div>
+          <h2>Contact Details</h2>
+          <address>
+            3744 E Chapman Ave, Orange, CA 92869<br />
+            Phone: <a class="link" href="tel:+1-714-538-1951">(714) 538-1951</a><br />
+            Email: <a class="link" href="mailto:sparklingnailsspa@gmail.com">sparklingnailsspa@gmail.com</a>
+          </address>
+
+          <h3 class="footer-title">Business Hours</h3>
+          <ul class="footer-list">
+            <li>Mon–Fri: 10:00 AM – 7:00 PM</li>
+            <li>Sat: 10:00 AM – 6:00 PM</li>
+            <li>Sun: <strong>Closed</strong></li>
+          </ul>
+
+          <div class="map-wrap">
+            <!-- Replace with your map embed -->
+            <iframe title="Google Map: Sparkling Nails & Spa"
+              src="https://maps.google.com/maps?q=3744%20E%20Chapman%20Ave%2C%20Orange%2C%20CA%2092869&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+
+        <form id="contact-form" class="form card" novalidate>
+          <h2>Send a Message</h2>
+          <label for="cname">Name <span aria-hidden="true">*</span></label>
+          <input id="cname" name="cname" required />
+          <label for="cemail">Email <span aria-hidden="true">*</span></label>
+          <input id="cemail" name="cemail" type="email" required />
+          <label for="cmsg">Message <span aria-hidden="true">*</span></label>
+          <textarea id="cmsg" name="cmsg" rows="5" required></textarea>
+          <button type="submit" class="btn btn-primary">Send</button>
+          <p id="contact-msg" class="form-msg" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid"><p class="muted">© <span id="year"></span> Sparkling Nails &amp; Spa</p></div>
+  </footer>
+
+  <script src="js/script.js" defer></script>
+</body>
+</html>
