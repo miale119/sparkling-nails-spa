@@ -1,24 +1,27 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Book Appointment | Sparkling Nails & Spa</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" type="image/png" href="images/favicon.png">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Book Appointment — Sparkling Nails & Spa</title>
+  <meta name="description" content="Book your manicure, pedicure, acrylic, dip, or waxing appointment online." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
-
 <body>
-  <!-- Header -->
+  <a class="skip-link" href="#main">Skip to main content</a>
+
   <header class="site-header">
     <div class="container nav-wrap">
-      <a href="index.html" class="brand">
-        <img src="images/logo.png" alt="Sparkling Nails & Spa logo">
-      </a>
-      <nav class="nav">
+      <a class="brand" href="index.html"><img src="images/logo.png" alt="Sparkling Nails & Spa logo" /></a>
+      <button class="menu-toggle" aria-controls="primary-nav" aria-expanded="false"><span class="sr-only">Open menu</span>☰</button>
+      <nav id="primary-nav" class="nav" aria-label="Primary">
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="services.html">Services</a></li>
+          <li><a class="active" href="booking.html">Book</a></li>
           <li><a href="gallery.html">Gallery</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
@@ -27,80 +30,75 @@
     </div>
   </header>
 
-  <!-- Main content -->
-  <main id="main">
-    <section class="section container">
+  <main id="main" class="section">
+    <div class="container narrow">
       <h1 class="section-title">Book an Appointment</h1>
-      <p class="section-sub">
-        Please complete the form below to request your appointment. We’ll confirm availability by email or phone.
-      </p>
+      <p class="section-sub">Pick a service, choose a time, and we’ll confirm by phone or email. <strong>We are closed on Sundays.</strong></p>
 
-      <form id="booking-form" class="form card"
-            action="https://formspree.io/f/xyzbqbva" method="POST"></form>  <!-- ← replace XXXXXXXX with your Formspree ID -->
-      
+      <form id="booking-form" class="form card" action="https://formspree.io/f/xyzbqbva"
+  method="POST" novalidate>
+        <fieldset>
+          <legend class="sr-only">Appointment details</legend>
 
-        <!-- Hidden options -->
-        <input type="hidden" name="_subject" value="New Booking Request from Website">
-        <!-- Optional: redirect to thank-you page -->
-        <!-- <input type="hidden" name="_redirect" value="https://yourusername.github.io/sparkling-nails-spa/thankyou.html"> -->
+          <label for="service">Select Service <span aria-hidden="true">*</span></label>
+          <select id="service" name="service" required aria-describedby="service-hint">
+            <option value="">-- Choose a service --</option>
+            <option value="Classic Manicure" data-price="15" data-time="30 mins">Classic Manicure — $15 (30 mins)</option>
+            <option value="Gel Manicure" data-price="25" data-time="45 mins">Gel Manicure — $25 (45 mins)</option>
+            <option value="Classic Pedicure" data-price="25" data-time="45 mins">Classic Pedicure — $25 (45 mins)</option>
+            <option value="Premium Pedicure" data-price="35 &amp; up" data-time="1 hr">Premium Pedicure — $35 &amp; up (1 hr)</option>
+            <option value="Volcano Pedicure" data-price="45 &amp; up" data-time="1 hr 15 mins">Volcano Pedicure — $45 &amp; up (1 hr 15 mins)</option>
+            <option value="Acrylic Full Set" data-price="45 &amp; up" data-time="1 hr">Acrylic Full Set — $45 &amp; up (1 hr)</option>
+            <option value="Dip Powder Nails" data-price="45 &amp; up" data-time="1 hr 15 mins">Dip Powder Nails — $45 &amp; up (1 hr 15 mins)</option>
+            <option value="Waxing" data-price="from 15" data-time="Varies">Waxing — from $15</option>
+          </select>
+          <p id="service-hint" class="muted">Price may vary by options and add-ons.</p>
 
-        <label for="name">Full Name *</label>
-        <input type="text" id="name" name="name" required>
+          <div class="inline">
+            <div>
+              <label for="date">Preferred Date <span aria-hidden="true">*</span></label>
+              <input id="date" name="date" type="date" required aria-describedby="date-hint" />
+              <p id="date-hint" class="muted">Sundays are unavailable.</p>
+            </div>
+            <div>
+              <label for="time">Preferred Time <span aria-hidden="true">*</span></label>
+              <input id="time" name="time" type="time" required />
+            </div>
+          </div>
 
-        <label for="email">Email *</label>
-        <input type="email" id="email" name="email" required>
+          <label for="name">Full Name <span aria-hidden="true">*</span></label>
+          <input id="name" name="name" type="text" autocomplete="name" required />
 
-        <label for="phone">Phone *</label>
-        <input type="tel" id="phone" name="phone" required>
+          <label for="phone">Phone <span aria-hidden="true">*</span></label>
+          <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required />
 
-        <label for="service">Select Service *</label>
-        <select id="service" name="service" required>
-          <option value="">-- Choose a service --</option>
-          <option value="Classic Manicure">Classic Manicure – $15 (30 mins)</option>
-          <option value="Gel Manicure">Gel Manicure – $25 (45 mins)</option>
-          <option value="Classic Pedicure">Classic Pedicure – $25 (45 mins)</option>
-          <option value="Premium Pedicure">Premium Pedicure – $35 &amp; up (1 hr)</option>
-          <option value="Volcano Pedicure">Volcano Pedicure – $45 &amp; up (1 hr 15 mins)</option>
-          <option value="Acrylic Full Set">Acrylic Full Set – $45 &amp; up (1 hr)</option>
-          <option value="Dip Powder Nails">Dip Powder Nails – $45 &amp; up (1 hr 15 mins)</option>
-          <option value="Waxing">Waxing – from $15</option>
-        </select>
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" />
 
-        <label for="date">Preferred Date *</label>
-        <input type="date" id="date" name="date" required>
+          <label for="notes">Notes</label>
+          <textarea id="notes" name="notes" rows="4" placeholder="Any preferences or special requests?"></textarea>
 
-        <label for="time">Preferred Time *</label>
-        <input type="time" id="time" name="time" required>
+          <div class="est">
+            <p><strong>Estimated Duration:</strong> <span id="est-time">—</span></p>
+            <p><strong>Listed Price:</strong> <span id="est-price">—</span></p>
+          </div>
 
-        <label for="notes">Additional Notes</label>
-        <textarea id="notes" name="notes" rows="4" placeholder="Any special requests or questions?"></textarea>
-
-        <button type="submit" class="btn">Submit Booking</button>
+          <button type="submit" class="btn btn-primary">Submit Request</button>
+          <p id="form-msg" class="form-msg" role="status" aria-live="polite"></p>
+        </fieldset>
       </form>
-    </section>
+    </div>
   </main>
 
-  <!-- Footer -->
   <footer class="site-footer">
     <div class="container footer-grid">
+      <div><img class="footer-logo" src="images/logo.png" alt="logo" /></div>
       <div>
-        <img src="images/logo-footer.png" alt="Sparkling Nails & Spa small logo" class="footer-logo">
-        <p>© 2025 Sparkling Nails & Spa. All Rights Reserved.</p>
-      </div>
-      <div>
-        <h3 class="footer-title">Business Hours</h3>
+        <h3 class="footer-title">Hours</h3>
         <ul class="footer-list">
           <li>Mon–Fri: 10:00 AM – 7:00 PM</li>
           <li>Sat: 10:00 AM – 6:00 PM</li>
           <li>Sun: <strong>Closed</strong></li>
-        </ul>
-      </div>
-      <div>
-        <h3 class="footer-title">Contact</h3>
-        <ul class="footer-list">
-          <li>3744 E Chapman Ave, Orange, CA 92869</li>
-          <li>Phone: (714) 538-1951</li>
-          <li>Email: sparklingnailsspa@gmail.com</li>
         </ul>
       </div>
     </div>
